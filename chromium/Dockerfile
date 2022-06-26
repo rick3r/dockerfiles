@@ -15,8 +15,9 @@
 #	jess/chromium
 #
 # You will want the custom seccomp profile:
-# 	wget https://raw.githubusercontent.com/jfrazelle/dotfiles/master/etc/docker/seccomp/chrome.json -O ~/chrome.json
-
+# 	wget https://raw.githubusercontent.com/jfrazelle/dotfiles/master/etc/docker/seccomp/chrome.json -O ~/chrome.json 
+      #statx system call need to be allowed in the seccomp profile for save from browser and ls from container
+      
 # Base docker image
 FROM debian:bullseye-slim
 LABEL maintainer "Jessie Frazelle <jess@linux.com>"
